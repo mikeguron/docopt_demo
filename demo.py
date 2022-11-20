@@ -13,5 +13,11 @@ Options:
 
 from docopt import docopt
 opt = docopt(__doc__)
-print(opt)
-print(type(opt))
+
+def main(arg1, arg2, arg3, arg_new):
+  print(opt)
+  print(type(opt))
+
+if __name__ == "__main__":
+    main(opt["arg1"], opt["--arg2"], opt["--arg3"], opt["arg_new"])
+    
