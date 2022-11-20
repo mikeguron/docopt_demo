@@ -1,0 +1,105 @@
+---
+---
+---
+
+## Individual assignment 1
+
+rubric={correctness:1}
+
+The purpose of this assignment is to ensure that everyone does some self-learning and obtains practice on using docopt to create command line arguements in scripts, as well as creating releases on GitHub. This assignment will be graded for completion. You must attempt all questions to get the grade.
+
+### Submission instructions
+
+-   You should commit and push your changes to the public GitHub.com repository you created in exercise 1.
+-   You should submit a `.html` version of this assignment to Canvas.
+
+### Exercise 1
+
+Create a public repository on GitHub.com called `docopt_demo`. Paste the url below:
+
+> <https://github.com/mikeguron/docopt_demo>
+
+### Exercise 2
+
+**Getting documentation from a {docopt} R script**
+
+In [this repo](https://github.ubc.ca/MDS-2022-23/DSCI_522_dsci-workflows_students), in the `src` directory, you will find a script named `demo.R`. Access the documentation for that script from the command line by running the script with the `--help` option (and no other options or arguments). Paste the documentation that was printed out to your terminal below.
+
+>     $ Rscript "C:\Users\mike_\Documents\DSCI_522\DSCI_522_dsci-workflows_students\src\demo.R" --help
+>     Warning message:
+>     package 'docopt' was built under R version 4.2.2
+>     This script prints out docopt args.
+>     Usage: demo.R <arg1> --arg2=<arg2> [--arg3=<arg3>]
+>
+>     Options:
+>     <arg>             Takes any value (this is a required positional argument)
+>     --arg2=<arg2>     Takes any value (this is a required option)
+>     [--arg3=<arg3>]   Takes any value (this is an optional option)
+
+### Exercise 3
+
+**What does `docopt` return in R?**
+
+Run the `demo.R` script giving it appropriate arguments to see what the `docopt` function in R returns. Try setting and not setting a value for `arg3`. Describe what you observed below.
+
+For options, you need to include the `--` in the command line call, for example:
+
+    Rscript src/my_script something --anoption=something more
+
+> The docopt function in R returns a list containing the command line arguments and their values.
+
+### Exercise 4
+
+**Break this script!**
+
+Run the `demo.R` script and find at least 3 different ways to break it by changing the values or order of the command line arguments at the command line (do not modify the script). Document how you did this below.
+
+> 1.  By running the script and not providing any command line arguments at all (eg. \$Rscript demo.R)
+> 2.  By running the script and only providing the required positional command line arguments arg (eg. \$Rscript demo.R 1)
+> 3.  By running the script and only providing the required option command line argument arg2 (eg. \$Rscript demo.R \--arg2=1)
+
+### Exercise 5
+
+**Add a new optional positional argument**
+
+Copy the `demo.R` script into your `docopt_demo` repo, and then edit it to add a new positional argument that is optional. Commit this change and push it to your `docopt_demo` repository. Paste the URL to this commit below:
+
+> <https://github.com/mikeguron/docopt_demo/commit/026a064dd178701e2ccdc6be3e4347c593d8bde6>
+
+### Exercise 6
+
+**Add a main function**
+
+Modify the `demo.R` script further so that the print statements happen inside a main function. Commit this change and push it to your `docopt_demo` repository. Paste the URL to this commit below:
+
+> <https://github.com/mikeguron/docopt_demo/commit/ea6a000915c801b1980af2c4c1a5c11d1cfdb929>
+
+### Exercise 7
+
+**What does `docopt` return in Python?**
+
+In [this repo](https://github.ubc.ca/MDS-2022-23/DSCI_522_dsci-workflows_students), in the `src` directory, you will find a script named `demo.py`. Run the `demo.py` script giving it appropriate arguments to see what the `docopt` function in Python returns. Try setting and not setting a value for `arg3`. How does this differ from what `docopt` returns in R? Describe what you observed below.
+
+> > The docopt function in Python returns a dictionary containing the command line arguments and their values as key, value pairs,
+
+### Exercise 8
+
+**Add a new optional positional argument**
+
+Copy the `demo.py` script into your `docopt_demo` repo, and then edit it to add a new positional argument that is optional. Commit this change and push it to your `docopt_demo` repository. Paste the URL to this commit below:
+
+> <https://github.com/mikeguron/docopt_demo/commit/331cd430d4c5145f1d17c2ea290854ed5f28f580>
+
+### Exercise 9
+
+Modify the `demo.py` script further so that the print statements happen inside a main function. Commit this change and push it to your `docopt_demo` repository. Paste the URL to this commit below:
+
+> <https://github.com/mikeguron/docopt_demo/commit/9a1919cb362d76a2874134b50ba054e2c288627b>
+
+### Exercise 10
+
+Create a release in your `docopt_demo` repo called `0.1.0`. Paste the URL to this release below.
+
+\*Hint: See the [creating a release docs](https://docs.github.com/en/free-pro-team@latest/github/administering-a-repository/managing-releases-in-a-repository#creating-a-release) to help complete this exercise.
+
+> <https://github.com/mikeguron/docopt_demo/releases/tag/0.1.0>
